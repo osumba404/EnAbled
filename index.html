@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EnAbled Foundation</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 
+                   'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+      background-color: #fafafa;
+    }
+    .navbar {
+      background-color: #5a2d82;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #fff !important;
+      font-size: 1.5rem;
+    }
+    .navbar-brand span {
+      color: #ffd700; /* highlight "Abled" */
+    }
+
+    /* Hero carousel */
+    .hero-carousel .carousel-item {
+      height: 90vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero-carousel .carousel-caption {
+      bottom: 30%;
+    }
+    .hero-carousel h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .cta-btn {
+      background-color: #5a2d82;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cta-btn:hover {
+      background-color: #431d63;
+      color: #fff;
+    }
+
+    .section-title {
+      color: #5a2d82;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .gallery img {
+      border-radius: 12px;
+      margin-bottom: 15px;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    }
+    .testimonial {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .testimonial i {
+      font-size: 2rem;
+      color: #5a2d82;
+    }
+
+    /* Partners ticker */
+    .partners-ticker {
+      overflow: hidden;
+      position: relative;
+      background: #fff;
+      border-top: 2px solid #eee;
+      border-bottom: 2px solid #eee;
+    }
+    .partners-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 20s linear infinite;
+    }
+    .partners-track img {
+      max-height: 80px;
+      margin: 0 40px;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+    .partners-track img:hover {
+      filter: grayscale(0%);
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Founder section */
+    .founder-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+    }
+    .founder-card img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #5a2d82;
+      margin-bottom: 20px;
+    }
+    .founder-card h4 {
+      color: #5a2d82;
+      font-weight: bold;
+    }
+    .founder-card p {
+      font-style: italic;
+    }
+    footer {
+      background-color: #5a2d82;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+
+
+        body {
+      font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 
+                   'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+      background-color: #fafafa;
+    }
+    .navbar { background-color: #5a2d82; }
+    .navbar-brand { font-weight: bold; color: #fff !important; font-size: 1.5rem; }
+    .navbar-brand span { color: #ffd700; }
+
+    /* Hero carousel */
+    .hero-carousel .carousel-item {
+      height: 90vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero-carousel .carousel-caption { bottom: 30%; }
+    .hero-carousel h1 { font-size: 3rem; font-weight: bold; }
+    .cta-btn {
+      background-color: #5a2d82;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cta-btn:hover { background-color: #431d63; color: #fff; }
+    .section-title { color: #5a2d82; font-weight: bold; margin-bottom: 1.5rem; text-align: center; }
+
+    /* Impact counters */
+    .counter { font-size: 2.5rem; font-weight: bold; color: #5a2d82; }
+    .program-card {
+      background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px; text-align: center; transition: 0.3s;
+    }
+    .program-card:hover { transform: translateY(-5px); }
+    .program-card i { font-size: 2rem; color: #5a2d82; margin-bottom: 15px; }
+
+    .involve-card {
+      background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center; transition: 0.3s;
+    }
+    .involve-card:hover { background: #f3e9ff; }
+    .involve-card i { font-size: 2rem; color: #5a2d82; margin-bottom: 10px; }
+
+    .story-card img { border-radius: 12px 12px 0 0; height: 200px; object-fit: cover; }
+    .story-card { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+
+    footer { background-color: #5a2d82; color: white; padding: 20px 0; text-align: center; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">En<span>Abled</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">Who We Are</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mission">Why We Exist</a></li>
+          <li class="nav-item"><a class="nav-link" href="#values">What Drives Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#audience">Who We Walk With</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Moments That Inspire</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Voices That Matter</a></li>
+          <li class="nav-item"><a class="nav-link" href="#partners">Friends of EnAbled</a></li>
+          <li class="nav-item"><a class="nav-link" href="#founder">Our Founder</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cta">Get Involved</a></li>
+          <li class="nav-item"><a class="nav-link" href="#impact">Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#involve">Get Involved</a></li>
+          <li class="nav-item"><a class="nav-link" href="#stories">Stories</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Carousel -->
+  <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+      <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/1600x900/?inclusion,community');">
+        <div class="carousel-caption text-center text-white">
+          <h1>Empowering Every Ability</h1>
+          <p>From limitation to leadership — rewriting the story together.</p>
+          <a href="#cta" class="btn cta-btn mt-3">Stand With Us</a>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/1600x900/?education,diversity');">
+        <div class="carousel-caption text-center text-white">
+          <h1>Inclusion is the Rule</h1>
+          <p>Every voice, every talent, every dream has a place here.</p>
+          <a href="#about" class="btn cta-btn mt-3">Discover More</a>
+        </div>
+      </div>
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/1600x900/?support,helping');">
+        <div class="carousel-caption text-center text-white">
+          <h1>Leadership Through Ability</h1>
+          <p>Creating a connected world where no one is left behind.</p>
+          <a href="#partners" class="btn cta-btn mt-3">Join Our Mission</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Who We Are -->
+  <section id="about" class="py-5 container">
+    <h2 class="section-title">Who We Are</h2>
+    <p>
+      EnAbled Foundation is a grassroots organisation that empowers people with disabilities by creating opportunities, telling stories, 
+      and amplifying voices to promote independence and inclusion. We believe disability is not inability but rather being abled differently. 
+    </p>
+    <p>
+      For too long, disabled people have been ignored and excluded by society without looking at their potential. This must change. 
+      Through advocacy, skills development, and community support, we ensure that people with disabilities thrive with dignity, respect, and equal access to life’s opportunities.
+    </p>
+  </section>
+
+  <!-- Why We Exist -->
+  <section id="mission" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title">Why We Exist</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <i class="fas fa-bullseye fa-2x mb-3 text-purple"></i>
+          <h4>Our Mission</h4>
+          <p>To rewrite the narrative of disability from limitation to leadership, making inclusion the rule not the exception.</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <i class="fas fa-eye fa-2x mb-3 text-purple"></i>
+          <h4>Our Vision</h4>
+          <p>A connected world where every ability has a seat at the table and a voice in the conversation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Drives Us -->
+  <section id="values" class="py-5 container">
+    <h2 class="section-title">What Drives Us</h2>
+    <div class="row text-center values">
+      <div class="col-md-2 col-6"><i class="fas fa-balance-scale"></i><p>Equality</p></div>
+      <div class="col-md-2 col-6"><i class="fas fa-handshake"></i><p>Integrity</p></div>
+      <div class="col-md-2 col-6"><i class="fas fa-heart"></i><p>Compassion</p></div>
+      <div class="col-md-2 col-6"><i class="fas fa-user-shield"></i><p>Dignity</p></div>
+      <div class="col-md-2 col-6"><i class="fas fa-lightbulb"></i><p>Innovation</p></div>
+      <div class="col-md-2 col-6"><i class="fas fa-fist-raised"></i><p>Empowerment</p></div>
+    </div>
+  </section>
+
+  <!-- Who We Walk With -->
+  <section id="audience" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Who We Walk With</h2>
+      <ul>
+        <li>People with disabilities (our heartbeat)</li>
+        <li>Employers committed to inclusive hiring</li>
+        <li>Training institutions for empowerment partnerships</li>
+        <li>Government agencies for policy and grant support</li>
+        <li>Philanthropists and impact investors</li>
+        <li>Faith communities and allies of inclusion</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Moments That Inspire (Gallery) -->
+  <section id="gallery" class="py-5 container">
+    <h2 class="section-title">Moments That Inspire</h2>
+    <div class="row gallery">
+      <div class="col-md-4 col-sm-6"><img src="https://source.unsplash.com/600x400/?wheelchair,community" alt="Gallery 1"></div>
+      <div class="col-md-4 col-sm-6"><img src="https://source.unsplash.com/600x400/?education,inclusion" alt="Gallery 2"></div>
+      <div class="col-md-4 col-sm-6"><img src="https://source.unsplash.com/600x400/?volunteers,helping" alt="Gallery 3"></div>
+      <div class="col-md-4 col-sm-6"><img src="https://source.unsplash.com/600x400/?support,disability" alt="Gallery 4"></div>
+      <div class="col-md-4 col-sm-6"><img src="https://source.unsplash.com/600x400/?community,event" alt="Gallery 5"></div>
+      <div class="col-md-4 col-sm-6"><img src="https://source.unsplash.com/600x400/?empowerment,smile" alt="Gallery 6"></div>
+    </div>
+  </section>
+
+  <!-- Voices That Matter -->
+  <section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Voices That Matter</h2>
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="testimonial mx-auto col-md-8">
+              <i class="fas fa-quote-left mb-3"></i>
+              <p>"Thanks to EnAbled, I now have access to learning materials adapted to my needs. I feel confident about my future."</p>
+              <h6>- Jane, Student</h6>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial mx-auto col-md-8">
+              <i class="fas fa-quote-left mb-3"></i>
+              <p>"Our company partnered with EnAbled, and we found incredible talent among people with disabilities. It's been transformative."</p>
+              <h6>- Mark, Employer</h6>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial mx-auto col-md-8">
+              <i class="fas fa-quote-left mb-3"></i>
+              <p>"EnAbled gave me mentorship and counseling support when I needed it most. Today, I mentor others."</p>
+              <h6>- Lucy, Beneficiary</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Impact in Numbers -->
+  <section id="impact" class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="section-title">Impact in Numbers</h2>
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <div class="counter" data-target="500">0</div>
+          <p>People Supported</p>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="counter" data-target="120">0</div>
+          <p>Youth Trained</p>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="counter" data-target="10">0</div>
+          <p>Policy Dialogues</p>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="counter" data-target="50">0</div>
+          <p>Partners Engaged</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Programs -->
+  <section id="programs" class="py-5 container">
+    <h2 class="section-title">What We Do</h2>
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6">
+        <div class="program-card">
+          <i class="fas fa-bullhorn"></i>
+          <h5>Advocacy & Awareness</h5>
+          <p>Fighting stigma and lobbying for disability-inclusive policies.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="program-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h5>Skills & Education</h5>
+          <p>Training programs that empower youth and adults with disabilities.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="program-card">
+          <i class="fas fa-hands-helping"></i>
+          <h5>Community Support</h5>
+          <p>Mentorship, counseling, and peer support groups.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="program-card">
+          <i class="fas fa-wheelchair"></i>
+          <h5>Accessibility Tools</h5>
+          <p>Providing mobility aids, adaptive software, and assistive tech.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Involved -->
+  <section id="involve" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Get Involved</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-3 col-sm-6">
+          <div class="involve-card">
+            <i class="fas fa-hands-helping"></i>
+            <h5>Volunteer</h5>
+            <p>Be part of events and mentorship programs.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="involve-card">
+            <i class="fas fa-handshake"></i>
+            <h5>Partner with Us</h5>
+            <p>Work with us to create inclusive opportunities.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="involve-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h5>Sponsor an Event</h5>
+            <p>Support awareness events that promote inclusion.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="involve-card">
+            <i class="fas fa-user-friends"></i>
+            <h5>Mentor Someone</h5>
+            <p>Guide and inspire youth with disabilities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stories of Change -->
+  <section id="stories" class="py-5 container">
+    <h2 class="section-title">Stories of Change</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="story-card">
+          <img src="https://source.unsplash.com/600x400/?smile,student" alt="Story 1">
+          <div class="p-3">
+            <h5>Jane’s Journey</h5>
+            <p>From isolation to education — how EnAbled gave Jane the tools to thrive.</p>
+            <a href="#" class="btn btn-sm cta-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="story-card">
+          <img src="https://source.unsplash.com/600x400/?work,disabled" alt="Story 2">
+          <div class="p-3">
+            <h5>Mark’s Inclusion</h5>
+            <p>An employer’s story of discovering talent and breaking stigma.</p>
+            <a href="#" class="btn btn-sm cta-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="story-card">
+          <img src="https://source.unsplash.com/600x400/?mentor,community" alt="Story 3">
+          <div class="p-3">
+            <h5>Lucy Gives Back</h5>
+            <p>How mentorship turned Lucy’s struggles into strength for others.</p>
+            <a href="#" class="btn btn-sm cta-btn">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Friends of EnAbled (Partners) -->
+  <section id="partners" class="py-5">
+    <h2 class="section-title">Friends of EnAbled</h2>
+    <div class="partners-ticker">
+      <div class="partners-track">
+        <img src="https://via.placeholder.com/150x80?text=Logo+1" alt="Partner 1">
+        <img src="https://via.placeholder.com/150x80?text=Logo+2" alt="Partner 2">
+        <img src="https://via.placeholder.com/150x80?text=Logo+3" alt="Partner 3">
+        <img src="https://via.placeholder.com/150x80?text=Logo+4" alt="Partner 4">
+        <img src="https://via.placeholder.com/150x80?text=Logo+5" alt="Partner 5">
+        <img src="https://via.placeholder.com/150x80?text=Logo+6" alt="Partner 6">
+        <!-- Repeat to create seamless scroll -->
+        <img src="https://via.placeholder.com/150x80?text=Logo+1" alt="Partner 1">
+        <img src="https://via.placeholder.com/150x80?text=Logo+2" alt="Partner 2">
+        <img src="https://via.placeholder.com/150x80?text=Logo+3" alt="Partner 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section id="founder" class="py-5 container">
+    <h2 class="section-title">Our Founder</h2>
+    <div class="founder-card mx-auto col-md-6">
+      <img src="https://source.unsplash.com/200x200/?portrait,woman" alt="Founder">
+      <h4>Enzina Janelle</h4>
+      <h6>Founder & Visionary</h6>
+      <p>"I started EnAbled because I believe no ability should go unnoticed. Together, we can turn barriers into bridges and stigma into strength."</p>
+      <div class="mt-3">
+        <a href="mailto:enzinajanelle@gmail.com" class="btn cta-btn"><i class="fas fa-envelope"></i> Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action -->
+  <section id="cta" class="py-5 text-center">
+    <div class="container">
+      <h2 class="section-title">Stand With Us for Inclusion</h2>
+      <p>Your support helps us:</p>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-wheelchair"></i> Provide mobility and communication tools</li>
+        <li><i class="fas fa-laptop"></i> Supply adaptive software and learning materials</li>
+        <li><i class="fas fa-users"></i> Host awareness events to fight stigma</li>
+        <li><i class="fas fa-graduation-cap"></i> Support education for children and youth</li>
+        <li><i class="fas fa-hand-holding-heart"></i> Offer counseling, mentorship, and peer support</li>
+        <li><i class="fas fa-landmark"></i> Push for policy changes and accessibility</li>
+      </ul>
+      <a href="https://gofundme.com" class="btn cta-btn mt-3"><i class="fas fa-donate"></i> Donate Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 EnAbled Foundation | Contact: <a href="mailto:enzinajanelle@gmail.com" class="text-white">enzinajanelle@gmail.com</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Counter animation
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      counter.innerText = '0';
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = target / 200; // speed
+        if (current < target) {
+          counter.innerText = `${Math.ceil(current + increment)}`;
+          setTimeout(updateCounter, 20);
+        } else {
+          counter.innerText = target + "+"; 
+        }
+      };
+      updateCounter();
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <style>
+
+  </style>
+
+
+
+
+
+
+
+
