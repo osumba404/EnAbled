@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donations | EnAbled Foundation</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 
+                   'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+      background-color: #fafafa;
+    }
+    .navbar { background-color: #5a2d82; }
+    .navbar-brand { font-weight: bold; color: #fff !important; font-size: 1.5rem; }
+    .navbar-brand span { color: #ffd700; }
+    .section-title { color: #5a2d82; font-weight: bold; margin-bottom: 1.5rem; text-align: center; }
+    .donate-card {
+      background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 30px; text-align: center; transition: 0.3s;
+    }
+    .donate-card:hover { transform: translateY(-5px); }
+    .donate-card i { font-size: 3rem; color: #5a2d82; margin-bottom: 15px; }
+    .cta-btn {
+      background-color: #5a2d82;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .cta-btn:hover { background-color: #431d63; color: #fff; }
+    footer { background-color: #5a2d82; color: white; padding: 20px 0; text-align: center; margin-top: 50px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">En<span>Abled</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Donations</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="text-center text-white py-5" style="background: url('https://source.unsplash.com/1600x500/?donation,help') center/cover no-repeat;">
+    <div class="container">
+      <h1 class="fw-bold">Support EnAbled Foundation</h1>
+      <p class="lead">Your contribution helps us empower lives and create an inclusive future.</p>
+    </div>
+  </header>
+
+  <!-- Donation Options -->
+  <section class="py-5 container">
+    <h2 class="section-title">Ways to Donate</h2>
+    <div class="row g-4">
+      <!-- Till Number -->
+      <div class="col-md-6">
+        <div class="donate-card">
+          <i class="fas fa-mobile-alt"></i>
+          <h4>M-PESA Till Number</h4>
+          <p><strong>Till: 3482208</strong></p>
+          <p>Use this till number to send your donation directly via M-PESA.</p>
+        </div>
+      </div>
+
+      <!-- PayPal -->
+      <div class="col-md-6">
+        <div class="donate-card">
+          <i class="fab fa-paypal"></i>
+          <h4>Donate via PayPal</h4>
+          <p>Email: <strong>Janetogutu21@gmail.com</strong></p>
+          <a href="https://www.paypal.com/donate?business=Janetogutu21@gmail.com" class="cta-btn">
+            Donate with PayPal
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Donations Matter -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="section-title">Why Your Donation Matters</h2>
+      <p class="lead">Every contribution helps us provide:</p>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <i class="fas fa-wheelchair fa-2x text-primary"></i>
+          <p class="mt-2">Mobility aids & assistive technology</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-book-open fa-2x text-primary"></i>
+          <p class="mt-2">Education & training for youth with disabilities</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-users fa-2x text-primary"></i>
+          <p class="mt-2">Community awareness & mentorship programs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 EnAbled Foundation | Contact: 
+      <a href="mailto:enzinajanelle@gmail.com" class="text-white">enzinajanelle@gmail.com</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

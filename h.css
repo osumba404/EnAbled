@@ -1,0 +1,178 @@
+body {
+      font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 
+                   'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+      background-color: #fafafa;
+    }
+    .navbar {
+      background-color: #5a2d82;
+    }
+    .navbar-brand {
+      font-weight: bold;
+      color: #fff !important;
+      font-size: 1.5rem;
+    }
+    .navbar-brand span {
+      color: #ffd700; /* highlight "Abled" */
+    }
+
+    /* Hero carousel */
+    .hero-carousel .carousel-item {
+      height: 90vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero-carousel .carousel-caption {
+      bottom: 30%;
+    }
+    .hero-carousel h1 {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    .cta-btn {
+      background-color: #5a2d82;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cta-btn:hover {
+      background-color: #431d63;
+      color: #fff;
+    }
+
+    .section-title {
+      color: #5a2d82;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .gallery img {
+      border-radius: 12px;
+      margin-bottom: 15px;
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    }
+    .testimonial {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .testimonial i {
+      font-size: 2rem;
+      color: #5a2d82;
+    }
+
+    /* Partners ticker */
+    .partners-ticker {
+      overflow: hidden;
+      position: relative;
+      background: #fff;
+      border-top: 2px solid #eee;
+      border-bottom: 2px solid #eee;
+    }
+    .partners-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 20s linear infinite;
+    }
+    .partners-track img {
+      max-height: 80px;
+      margin: 0 40px;
+      filter: grayscale(100%);
+      transition: filter 0.3s;
+    }
+    .partners-track img:hover {
+      filter: grayscale(0%);
+    }
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Founder section */
+    .founder-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+    }
+    .founder-card img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #5a2d82;
+      margin-bottom: 20px;
+    }
+    .founder-card h4 {
+      color: #5a2d82;
+      font-weight: bold;
+    }
+    .founder-card p {
+      font-style: italic;
+    }
+    footer {
+      background-color: #5a2d82;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+
+
+        body {
+      font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 
+                   'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+      background-color: #fafafa;
+    }
+    .navbar { background-color: #5a2d82; }
+    .navbar-brand { font-weight: bold; color: #fff !important; font-size: 1.5rem; }
+    .navbar-brand span { color: #ffd700; }
+
+    /* Hero carousel */
+    .hero-carousel .carousel-item {
+      height: 90vh;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero-carousel .carousel-caption { bottom: 30%; }
+    .hero-carousel h1 { font-size: 3rem; font-weight: bold; }
+    .cta-btn {
+      background-color: #5a2d82;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .cta-btn:hover { background-color: #431d63; color: #fff; }
+    .section-title { color: #5a2d82; font-weight: bold; margin-bottom: 1.5rem; text-align: center; }
+
+    /* Impact counters */
+    .counter { font-size: 2.5rem; font-weight: bold; color: #5a2d82; }
+    .program-card {
+      background: #fff; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px; text-align: center; transition: 0.3s;
+    }
+    .program-card:hover { transform: translateY(-5px); }
+    .program-card i { font-size: 2rem; color: #5a2d82; margin-bottom: 15px; }
+
+    .involve-card {
+      background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center; transition: 0.3s;
+    }
+    .involve-card:hover { background: #f3e9ff; }
+    .involve-card i { font-size: 2rem; color: #5a2d82; margin-bottom: 10px; }
+
+    .story-card img { border-radius: 12px 12px 0 0; height: 200px; object-fit: cover; }
+    .story-card { border-radius: 12px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+
+    footer { background-color: #5a2d82; color: white; padding: 20px 0; text-align: center; }
